@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("../../assets/Poppins/Poppins-Light.ttf");
+}
+.container {
+  /* border: 2px solid red; */
+  padding: 15px;
+  position: relative;
+}
+.logoSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  flex: 50%;
+}
+.logo img {
+  width: 80px;
+}
+.navMenu {
+  border: 2px solid black;
+  padding: 5px 8px;
+  padding-top: 8px;
+  cursor: pointer;
+}
+.navMenu > div {
+  width: 30px;
+  margin-bottom: 5px;
+  border: 3px solid black;
+}
+.menu {
+  width: 100%;
+  padding: 10px 15px;
+  left: 0;
+  top: 101%;
+  /* background-color: yellow; */
+  position: absolute;
+  z-index: 5;
+}
+.menuItem {
+  padding: 10px 15px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #b8b0b0;
+  font-family: Poppins;
+  font-weight: 600;
+}
+.navBar {
+  display: none;
+}
+.modalOptions {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .logo img {
+    width: 90px;
+  }
+  .navMenu {
+    display: none;
+  }
+  .navBar {
+    display: flex;
+    /* border: 1px solid red; */
+    flex: 80%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+    font-weight: 600;
+    font-family: Poppins;
+    font-size: 1rem;
+  }
+  .navBar > div {
+    cursor: pointer;
+  }
+  .navBar > div:first-child {
+    margin-left: auto;
+  }
+  .navBar > div:hover {
+    color: rgb(18, 204, 39);
+  }
+  .logo {
+    flex: 20%;
+    /* border: 1px solid red; */
+  }
+  .modalOptions {
+    /* border: 2px solid red; */
+    display: block;
+    background-color: yellow;
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    white-space: nowrap;
+    padding: 10px 15px;
+    z-index: 5;
+  }
+  .modalOptions > div {
+    padding: 10px 20px;
+  }
+  .modalOptions > div:hover {
+    color: black;
+  }
+}

@@ -70,7 +70,7 @@
   margin-top: 20px;
   text-align: center;
   font-family: Poppins;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   text-transform: capitalize;
 }
@@ -128,5 +128,8 @@
   }
   .info {
     font-size: 1rem;
+  }
+  .caption {
+    font-size: 2rem;
   }
 }

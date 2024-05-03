@@ -1,15 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./product.module.css";
 import { data } from "../../assets/data";
 import point from "../../assets/point.png";
 function Product() {
   const { category, product } = useParams();
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const ref4 = useRef(null);
 
   const type = data.find((el) => el.type === category);
   const pageData = type.items.find((el) => el.name === product);
   const { ingrediants } = pageData;
   const ings = ingrediants ? Object.keys(ingrediants) : null;
+  const handleNav = (ref) => {
+    // ref.current.scrollIntoView({ top: "500px", behavior: "smooth" });
+    const yOffset = -250;
+    const y =
+      ref.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
   useEffect(() => {
     window.scrollTo({ top: "0" });
   }, []);
@@ -21,13 +32,19 @@ function Product() {
         </div>
         <div className={styles.caption}>Indian {pageData.name} Exporters</div>
         <div className={styles.about}>{pageData.about}</div>
-        <div className={styles.gmd}>
+        <div className={styles.innerNav}>
+          <div onClick={() => handleNav(ref1)}>Global Market Demand</div>
+          <div onClick={() => handleNav(ref2)}>Specification</div>
+          <div onClick={() => handleNav(ref3)}>Ingrediants</div>
+          <div onClick={() => handleNav(ref4)}>Uses</div>
+        </div>
+        <div ref={ref1} className={styles.gmd}>
           <div className={styles.gmdCaption}>
             {pageData?.gmd && "Global Market Demand"}
           </div>
           <div>{pageData?.gmd}</div>
         </div>
-        <div className={styles.specification}>
+        <div ref={ref2} className={styles.specification}>
           <div className={styles.specCaption}>Specification</div>
           <table>
             <tr>
@@ -48,7 +65,7 @@ function Product() {
             </tr>
           </table>
         </div>
-        <div className={styles.ingrediants}>
+        <div ref={ref3} className={styles.ingrediants}>
           <div className={styles.ingCaption}>
             {pageData?.ingrediants && "Ingrediants"}
           </div>
@@ -68,7 +85,7 @@ function Product() {
               })}
           </table>
         </div>
-        <div className={styles.uses}>
+        <div ref={ref4} className={styles.uses}>
           <div className={styles.usesCaption}>
             {pageData?.uses && "Uses :"}{" "}
           </div>

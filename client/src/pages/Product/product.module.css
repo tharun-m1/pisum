@@ -66,6 +66,9 @@ th {
   font-size: 1.3rem;
   margin-bottom: 10px;
 }
+.innerNav {
+  display: none;
+}
 @media screen and (min-width: 769px) {
   table {
     width: 55%;
@@ -73,5 +76,33 @@ th {
   td,
   th {
     font-size: 1rem;
+  }
+  .innerNav {
+    display: flex;
+    /* border: 1px solid red; */
+    padding: 15px;
+    margin: 100px 0px;
+    justify-content: center;
+    gap: 30px;
+    position: sticky;
+    top: 100px;
+    background-color: white;
+    z-index: 5;
+  }
+  a {
+    text-decoration: none;
+    color: green;
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .innerNav > div {
+    color: green;
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-weight: 800;
+    border: 1px dashed green;
+    padding: 10px 15px;
+    cursor: pointer;
   }
 }

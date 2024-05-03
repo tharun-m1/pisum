@@ -30,8 +30,15 @@ function Header() {
             <div></div>
           </div>
           <div className={styles.navBar}>
-            <div>Home</div>
-            <div>About Us</div>
+            <div onClick={() => navigate("/")}>Home</div>
+            <div
+              onClick={() => {
+                setShowMenu(false);
+                navigate("about");
+              }}
+            >
+              About Us
+            </div>
             <div
               style={{ position: "relative" }}
               onClick={() => setShowProducts(!showProducts)}
@@ -59,8 +66,26 @@ function Header() {
         </div>
         {showMenu ? (
           <div className={styles.menu}>
-            <div className={styles.menuItem}> Home </div>
-            <div className={styles.menuItem}> About Us </div>
+            <div
+              onClick={() => {
+                setShowMenu(false);
+                navigate("/");
+              }}
+              className={styles.menuItem}
+            >
+              {" "}
+              Home{" "}
+            </div>
+            <div
+              onClick={() => {
+                setShowMenu(false);
+                navigate("about");
+              }}
+              className={styles.menuItem}
+            >
+              {" "}
+              About Us{" "}
+            </div>
             <div
               onClick={() => setShowProducts(!showProducts)}
               className={styles.menuItem}

@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  /* border: 2px solid red; */
+  min-height: 100dvh;
+  padding-bottom: 100px;
+}
+.prodRange {
+  background-color: rgb(255, 234, 144);
+  padding: 25px 0px;
+}
+.caption {
+  font-family: Poppins;
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 10px 0px;
+}
+.line {
+  border: 2px solid black;
+  width: 40%;
+  margin: auto;
+}
+.types {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 0px;
+  gap: 15px;
+  justify-content: center;
+}
+.types > div {
+  text-transform: uppercase;
+  font-family: Poppins;
+  padding: 10px 15px;
+  background-color: white;
+  font-size: 0.8rem;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.products {
+  /* border: 1px solid red; */
+  width: 95%;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  row-gap: 20px;
+}
+.products > div {
+  width: 100%;
+}
+.products > div img {
+  width: 100%;
+}
+.prodName {
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: Poppins;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.whyUsCaption {
+  text-align: center;
+  font-family: Poppins;
+  font-size: 1.8rem;
+  font-weight: 800;
+  padding: 25px 0px;
+}
+.whyUs {
+  /* border: 1px solid red; */
+  padding: 15px 0px;
+}
+.left,
+.right,
+.points {
+  width: 95%;
+  margin: auto;
+}
+.left img {
+  width: 100%;
+}
+
+.rightCap {
+  font-family: Poppins;
+  font-size: 1rem;
+  padding: 15px 0px;
+  color: rgb(101, 98, 98);
+  font-weight: 800;
+}
+.info {
+  font-family: Poppins;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-align: justify;
+}
+.points {
+  margin-top: 20px;
+}
+ul {
+  width: 95%;
+  margin: auto;
+  /* border: 2px solid red; */
+}
+li {
+  font-family: Poppins;
+  font-size: 1rem;
+  margin-left: 15px;
+}
+@media screen and (min-width: 425px) {
+  .products {
+    gap: 35px;
+  }
+  .products > div {
+    width: 40%;
+  }
+  .left,
+  .right {
+    width: 80%;
+    /* border: 1px solid red; */
+  }
+}
+@media screen and (min-width: 768px) {
+  .products > div {
+    width: 30%;
+  }
+  .left > img {
+    width: 80%;
+  }
+  .whyUs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .left,
+  .right {
+    margin: 0;
+  }
+  .whyUs > div {
+    width: calc(50% - 20px);
+  }
+  .right {
+    padding: 0px 15px;
+  }
+  .rightCap {
+    font-size: 1.2rem;
+  }
+  .info {
+    font-size: 1.8rem;
+  }
+  li {
+    font-size: 1.2rem;
+  }
+  .whyUsCaption {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .products > div {
+    width: 30%;
+  }
+}

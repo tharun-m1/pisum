@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  /* border: 3px solid red; */
+  width: 100%;
+  position: relative;
+}
+.imgCont {
+  display: flex;
+  overflow: hidden;
+}
+.imgCont img {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 100%;
+  object-fit: contain;
+}
+.leftArrowCont {
+  /* border: 1px solid red; */
+  height: 100%;
+  width: 15%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  cursor: pointer;
+}
+.leftArrowCont:hover .leftArrow {
+  border-left-color: white;
+  border-top-color: white;
+}
+.leftArrow {
+  width: 20px;
+  height: 20px;
+  border-left: 3px solid rgb(167, 163, 163);
+  border-top: 3px solid rgb(167, 163, 163);
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  transform: rotate(-45deg);
+}
+.rightArrowCont {
+  /* border: 1px solid red; */
+  height: 100%;
+  width: 15%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  cursor: pointer;
+}
+.rightArrowCont:hover .rightArrow {
+  border-right-color: white;
+  border-top-color: white;
+}
+.rightArrow {
+  width: 20px;
+  height: 20px;
+  border-right: 3px solid rgb(167, 163, 163);
+  border-top: 3px solid rgb(167, 163, 163);
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  transform: rotate(45deg);
+}
+.nav {
+  display: flex;
+  position: absolute;
+  bottom: 10%;
+  left: 45%;
+  /* border: 1px solid red; */
+  width: 10%;
+  justify-content: space-between;
+  gap: 15px;
+}
+.nav > div {
+  border: 3px solid rgb(166, 158, 158);
+  cursor: pointer;
+  flex-grow: 1;
+}
+.nav > div:hover {
+  border-color: white;
+}
+
+@media screen and (min-width: 769px) {
+  .leftArrowCont,
+  .rightArrowCont {
+    width: 10%;
+  }
+}

@@ -101,4 +101,7 @@
   .member {
     width: calc(50% - 10px);
   }
+  .story {
+    font-size: 1.2rem;
+  }
 }

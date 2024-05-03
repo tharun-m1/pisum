@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./about.module.css";
 import male from "../../assets/male.png";
 import female from "../../assets/female.png";
 function About() {
+  useEffect(() => {
+    window.scrollTo({ top: "0" });
+  }, []);
   return (
     <>
       <div className={styles.container}>
@@ -15,7 +18,7 @@ function About() {
           bring the bounty of India's diverse agricultural landscape to tables
           around the globe.
         </div>
-        <div style={{ width: "95%", margin: "auto", fontSize: "1.1rem" }}>
+        <div style={{ width: "95%", margin: "auto", fontSize: "1.2rem" }}>
           <strong>hello there!</strong>
         </div>
         <div className={styles.story}>

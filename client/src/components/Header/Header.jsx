@@ -59,7 +59,14 @@ function Header() {
                 ""
               )}
             </div>
-            <div>Certificates</div>
+            <div
+              onClick={() => {
+                setShowMenu(false);
+                navigate("certificates");
+              }}
+            >
+              Certificates
+            </div>
             <div>Blogs</div>
             <div>Contact Us</div>
           </div>
@@ -130,7 +137,16 @@ function Header() {
                 Cereals
               </div>
             </div>
-            <div className={styles.menuItem}> Certificates </div>
+            <div
+              onClick={() => {
+                setShowMenu(false);
+                navigate("certificates");
+              }}
+              className={styles.menuItem}
+            >
+              {" "}
+              Certificates{" "}
+            </div>
             <div className={styles.menuItem}> Blogs </div>
             <div className={styles.menuItem}> Contact Us </div>
           </div>

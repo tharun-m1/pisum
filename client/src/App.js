@@ -5,6 +5,7 @@ import Category from "./pages/Category/Category";
 import Product from "./pages/Product/Product";
 import HomePage from "./pages/HomPage/HomePage";
 import About from "./pages/About/About";
+import Certificates from "./pages/Certificates/Certificates";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path=":category" element={<Category />}></Route>
           <Route path=":category/:product" element={<Product />} />
           <Route path="about" element={<About />} />
+          <Route path="certificates" element={<Certificates />} />
         </Route>
       </Routes>
     </>

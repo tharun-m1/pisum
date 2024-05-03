@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./home.module.css";
 import Header from "../../components/Header/Header";
 import { Outlet } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 
 function Home() {
   return (
@@ -12,6 +13,9 @@ function Home() {
         </div>
         <div className={styles.main}>
           <Outlet />
+        </div>
+        <div className={styles.footer}>
+          <Footer />
         </div>
       </div>
     </>

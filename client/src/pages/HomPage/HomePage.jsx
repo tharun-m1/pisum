@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "../../components/Carousel/Carousel";
 import styles from "./hompage.module.css";
 import Chilli from "../../assets/product-imgs/chilli.png";
@@ -18,6 +18,10 @@ function HomePage() {
     pulses: Pulses,
     makhana: Makhana,
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: "0" });
+  }, []);
 
   return (
     <>

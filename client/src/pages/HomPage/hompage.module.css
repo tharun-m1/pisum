@@ -148,7 +148,7 @@ li {
     font-size: 1.2rem;
   }
   .info {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   li {
     font-size: 1.2rem;
@@ -161,5 +161,8 @@ li {
 @media screen and (min-width: 1024px) {
   .products > div {
     width: 30%;
+  }
+  .left {
+    padding-left: 30px;
   }
 }

@@ -72,6 +72,9 @@
 .whyUs {
   /* border: 1px solid red; */
   padding: 15px 0px;
+  background-image: url("../../assets/whyUSbg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .left,
 .right,

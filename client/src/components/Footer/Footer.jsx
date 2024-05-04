@@ -32,17 +32,21 @@ function Footer() {
             </div>
           </div>
           <div className={styles.address}>
-            <div className={styles.caption}>Stay Connected</div>
-            <div>Rigestered address:</div>
+            {/* <div className={styles.caption}>Stay Connected</div> */}
+            <div className={styles.caption}>Rigestered address:</div>
             <div>
               33/15, Prashant Bunglow, <br />
               Opp. Garware College,
               <br />
               Karve Road, Pune 411004 India
             </div>
-            <div>Phone Numbers:</div>
+          </div>
+          <div className={styles.number}>
+            <div className={styles.caption}>Phone Numbers:</div>
             <div>9765758899 / 7219115858</div>
-            <div>Email: </div>
+          </div>
+          <div className={styles.mail}>
+            <div className={styles.caption}>Email: </div>
             <div>inquiry@pisumfoods.com</div>
           </div>
         </div>

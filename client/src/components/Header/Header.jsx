@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./header.module.css";
-import logo from "../../assets/pisum-logo.png";
+import logo from "../../assets/logo.png";
 import drop from "../../assets/drop.png";
 import { useNavigate } from "react-router-dom";
 function Header() {

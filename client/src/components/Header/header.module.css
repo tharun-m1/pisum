@@ -73,7 +73,7 @@
     gap: 30px;
     font-weight: 600;
     font-family: Poppins;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .navBar > div {
     cursor: pointer;
@@ -82,7 +82,8 @@
     margin-left: auto;
   }
   .navBar > div:last-child {
-    margin-right: auto;
+    /* margin-right: auto; */
+    margin-right: 50px;
   }
   .navBar > div:hover {
     color: rgb(18, 204, 39);
@@ -110,5 +111,10 @@
   }
   .modalOptions > div:hover {
     color: black;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navBar {
+    font-size: 1.4rem;
   }
 }
